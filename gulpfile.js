@@ -1,4 +1,6 @@
-function test(done) {
-    console.log('test');
+var gulp = require('gulp');
+
+gulp.task('hello', function(done) {
+    console.log('Hello Zell');
     done();
-    }
+ });
