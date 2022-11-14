@@ -1,6 +1,7 @@
-var gulp = require('gulp');
-
-gulp.task('hello', function(done) {
-    console.log('Hello Zell');
-    done();
- });
+var concat = require('gulp-concat');
+ 
+gulp.task('scripts', function() {
+  return gulp.src('./lib/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./dist/'));
+});
